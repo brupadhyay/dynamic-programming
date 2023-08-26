@@ -1,7 +1,9 @@
 ## Dynamic-Programming-By-Striver
 
+---
+
 <p align="center">
-<img src = "https://img.youtube.com/vi/tyB0ztf0DNY/sddefault.jpg" width="100%">
+<img src = "https://img.youtube.com/vi/tyB0ztf0DNY/sddefault.jpg" width="75%">
 </p>
 
 ### Code for the lectures of DP Series
