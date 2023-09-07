@@ -86,3 +86,10 @@ int minSumPath3(vector<vector<int>> &grid) {
     }
     return next[0];
 }
+
+int main(){
+    vector<vector<int>> grid = {{5,9,6},
+    {11,5,2}};
+    cout << "minimum path sum is "<< minSumPath3(grid);
+    return 0;
+}
