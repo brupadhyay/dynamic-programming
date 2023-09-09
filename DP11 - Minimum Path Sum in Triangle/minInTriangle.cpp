@@ -72,14 +72,8 @@ int minimumPathSum3(vector<vector<int>>& triangle, int n){
 			if(i == n-1){
 				curr[j] = triangle[i][j];
 			} else {
-				int bottom = 1e9;
-				int diagonal = 1e9;
-				if(i + 1 < n){
-					bottom = next[j];
-				}
-				if(i + 1 < n && j + 1 < triangle[i+1].size()){
-					diagonal = next[j+1];
-				}
+				int bottom = next[j];
+				int diagonal = next[j+1];
 				curr[j] = triangle[i][j] + min(bottom, diagonal);
 			}
 		}
@@ -93,5 +87,5 @@ int main(){
     {2,3},
     {3,6,7},
     {8,9,6,10}};
-    cout << "minimum path sum is "<< minimumPathSum2(triangle, 4);
+    cout << "minimum path sum is "<< minimumPathSum3(triangle, 4);
 }
