@@ -1,6 +1,12 @@
 #include <bits/stdc++.h> 
 using namespace std;
 
+/**
+ * Memoization - Top-Down Approach
+ * TC - O(N x maxW)
+ * SC - O(N) + O(N x maxW)
+*/
+
 int solve(int i, int maxWeight, int n, vector<int> weight, vector<int> value, vector<vector<int>> &dp){
 	if(maxWeight == 0) return 0;
 	if(i >= n){
@@ -22,6 +28,12 @@ int knapsack1(vector<int> weight, vector<int> value, int n, int maxWeight)
 	return solve(0, maxWeight, n, weight, value, dp);	
 }
 
+/**
+ * Tabulation - Bottom-Up Approach
+ * TC - O(N x maxW)
+ * SC - O(N x maxW)
+*/
+
 int knapsack2(vector<int> weight, vector<int> value, int n, int maxWeight) 
 {
 	vector<vector<int>> dp(n+1, vector<int> (maxWeight + 1, 0));
@@ -37,6 +49,12 @@ int knapsack2(vector<int> weight, vector<int> value, int n, int maxWeight)
 	}
 	return dp[0][maxWeight];
 }
+
+/**
+ * Space Optimisation - Bottom-Up Approach
+ * TC - O(N x maxW)
+ * SC - O(maxW) + O(maxW)
+*/
 
 int knapsack3(vector<int> weight, vector<int> value, int n, int maxWeight) 
 {
@@ -56,6 +74,12 @@ int knapsack3(vector<int> weight, vector<int> value, int n, int maxWeight)
 	}
 	return front[maxWeight];	
 }
+
+/**
+ * More Space Optimisation - Bottom-Up Approach
+ * TC - O(N x maxW)
+ * SC - O(maxW)
+*/
 
 int knapsack4(vector<int> weight, vector<int> value, int n, int maxWeight) 
 {

@@ -65,6 +65,7 @@ int findWays3(vector<int>& arr, int k)
 	vector<int> curr(k+1,0);
 	front[0] = curr[0] = 1;
 	if(arr[n-1] <= k) front[arr[n-1]] = 1;
+    
 	for(int i = n-2;i>=0;i--){
 		for(int target = 1;target<=k;target++){
 			int take = 0;
