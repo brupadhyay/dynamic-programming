@@ -49,7 +49,7 @@ int lcs2(string s, string t)
 }
 
 /**
- * Space Optimisation - Top-Down
+ * Space Optimisation - Bottom-Up
  * TC - O(N x M)
  * SC - O(2 x M) { 1D Optimisation }
 */
@@ -68,4 +68,11 @@ int lcs3(string s, string t)
 		front = curr;
 	}
 	return front[0];
+}
+
+int main(){
+	string s = "abcdb";
+	string t = "bcacdhb";
+	// answer is 4 ( acdb )
+	cout << "Length of LCS is "<< lcs3(s, t) << endl;
 }
