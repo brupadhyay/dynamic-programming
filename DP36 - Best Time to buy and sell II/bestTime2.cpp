@@ -63,7 +63,7 @@ long getMaximumProfit2(long *values, int n)
 /**
  * Space Optimisation - 1D Array (constant space)
  * TC - O(N x 2)
- * SC - O(1)
+ * SC - O(4)
 */
 
 long getMaximumProfit3(long *values, int n)
@@ -84,4 +84,24 @@ long getMaximumProfit3(long *values, int n)
         front = curr;
     }
     return front[1];
+}
+
+/**
+ * Space Optimisation - constant space
+ * TC - O(N)
+ * SC - O(1)
+*/
+
+long getMaximumProfit4(long *values, int n)
+{
+    long frontBuy = 0, frontNotBuy = 0;
+    long currBuy, currNotBuy;
+
+    for(int i = n-1; i >= 0; i--){
+        currBuy = max(-values[i] + frontNotBuy, frontBuy);
+        currNotBuy = max(values[i] + frontBuy, frontNotBuy);
+        frontNotBuy = currNotBuy;
+        frontBuy = currBuy;
+    }
+    return frontBuy;
 }
