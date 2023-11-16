@@ -25,6 +25,7 @@ int matrixChainMultiplication(int* arr, int n) {
     return f(1, n, arr, n, dp);
 }
 
+// DP 49
 /**
  * Tabulation - Bottom-Up
  * TC - O(N^3)
@@ -38,6 +39,7 @@ int matrixChainMultiplication(int* arr, int n) {
         dp[i][i] = 0; // all diagonal elements equal to 0
     }
     for(int i = n; i > 0; i--){
+        // * i...j so ideally j > i hence j = i+1 ... n
         for(int j = i+1; j <= n; j++){
             int mini = 1e9;
             for(int k = i; k < j; k++){
