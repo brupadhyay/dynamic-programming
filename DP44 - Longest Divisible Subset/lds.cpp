@@ -2,7 +2,7 @@
 using namespace std;
 
 /**
- * TC - O(N x N)
+ * TC - O(NlogN) + O(N x N)
  * SC - O(N) x 2
 */
 
