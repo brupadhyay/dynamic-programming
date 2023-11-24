@@ -1,6 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/**
+ * Time Complexity: O(N*M), where N = total no. of rows and M = total no. of columns
+ * Reason: We are basically traversing a 2D matrix with N rows and M columns.
+ * Space Complexity: O(N*M), where N = total no. of rows and M = total no. of columns
+ * Reason: We are using a 2D dp array with N rows and M columns.
+*/
+
 class Solution {
 public:
     int countSquares(int n, int m, vector<vector<int>> matrix) {
